@@ -1,0 +1,19 @@
+@port = {{$dotenv PORT}}
+
+@host = {{$dotenv HOST}}
+
+@baseurl = http://{{host}}:{{port}}
+
+
+### GET base endpoit
+GET {{baseurl}}/
+
+### GET test endpoint
+GET  {{baseurl}}/test?value=123&name=tester
+
+### GET data to api/v1/embed
+GET {{baseurl}}/api/v1/embed?value=11
+### GET data to api/v1/embed
+GET {{baseurl}}/api/v1/embed?value=111
+### GET data to api/v1/embed
+GET {{baseurl}}/api/v1/embed?value=1
